@@ -1,0 +1,480 @@
+/* Overall Font changers */
+
+/* Changing the links to not be blue */
+a {
+  text-decoration: none;
+  color: black;
+}
+/* Extra changes because CSS is a stupid language */
+
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+/*                                                                               Navigation bar                                                                               */
+
+.navBar {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 0px;
+  gap: 16px;
+  height: 10vh;
+}
+
+#navBarLogo {
+  /*veterans unite logo in nav bar*/
+
+  margin: 0;
+  width: 100px;
+  height: 100px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.navBarList {
+/*Display stuff*/
+  display: flex;
+  flex: none;
+  flex-grow: 0;
+  flex-direction: row;
+  align-items: baseline;
+/*Box model stuff*/
+  margin: 0;
+  padding: 0px;
+/*Typography stuff*/
+  text-decoration: none;
+/*Miscellaneous*/
+  gap: 32px;
+  isolation: isolate;
+  order: 1;
+  list-style: none;
+}
+
+.buttonSideBar {
+  margin: 0 16px;
+  filter: invert(91%) sepia(12%) saturate(769%) hue-rotate(63deg)
+    brightness(91%) contrast(85%);
+}
+
+.buttonSideBar:hover {
+  cursor: pointer;
+  filter: invert(50%);
+}
+
+#navBarButton {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 24px;
+  background: #80ed99;
+  border: 2px solid #80ed99;
+  border-radius: 100px 1px 1px 50px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  z-index: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  color: white;
+}
+
+#navBarText {
+  font-family: "Istok Web";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+
+  color: rgba(0, 0, 0, 0.3);
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  z-index: 1;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 40px;
+  left: 40px;
+
+  width: 26px;
+  height: 26px;
+
+  cursor: pointer;
+  z-index: 999;
+  background-color: white;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: #616161;
+
+  transition-duration: 0.25s;
+}
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+
+  width: 300px;
+  height: 100%;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: #eceff1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+
+  transition-duration: 0.25s;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+
+  color: #333;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition-duration: 0.25s;
+}
+.menu__item:hover {
+  background-color: #cfd8dc;
+}
+
+/*                                                                      Hero Section                                                                                           */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.divHero {
+  background: white;
+  border: 2px dashed #a8d8a8;
+  border-radius: 12px;
+  padding: 60px 40px;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin: 40px 32px;
+  box-sizing: border-box;
+  height: fit-content;
+}
+
+.heroHeader {
+  /* Main Headline */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 110%;
+  /* or 79px */
+
+  /* Blue Gray/900 */
+  color: #0f172a;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.heroSubtext {
+  /* Paragraph */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2vw;
+  line-height: 160%;
+  /* or 29px */
+
+  /* Blue Gray/900 */
+  color: #0f172a;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 16px;
+}
+
+.highlight {
+  color: #7dd87d;
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.divHeroButtons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.buttonHeroMain {
+  background-color: #7dd87d;
+  color: white;
+}
+
+.buttonHeroMain:hover {
+  background-color: #6bc26b;
+  transform: translateY(-1px);
+}
+
+.buttonHeroSub {
+  background-color: transparent;
+  color: #7dd87d;
+  border: 2px solid #7dd87d;
+  /* Button Text */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  /* identical to box height, or 120% */
+  letter-spacing: 0.5px;
+}
+
+.buttonHeroSub:hover {
+  background-color: #7dd87d;
+  color: white;
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-left: 8px solid currentColor;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.sideBar.open {
+  translate: 0%;
+}
+
+@media (max-width: 750px) {
+  .divHeroButtons {
+    padding: 40px 25px;
+  }
+
+  .main-heading {
+    font-size: 36px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+
+  .navBarList {
+    display: none;
+  }
+
+  #navBarLogo {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}
+
+.heroImage {
+  width: 40vw;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .heroImage {
+    display: flex;
+  }
+  .divHero {
+    max-width: 50%;
+  }
+  .heroHeader {
+    font-size: 4vw;
+  }
+  .heroSubtext {
+    font-size: 1vw;
+  }
+}
+
+.statement {
+  display: flex;
+  margin: 32px 16px;
+  flex-direction: row-reverse;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: min-content;
+}
+
+.donationBox {
+   border: 2px dashed #a8d8a8;
+  border-radius: 12px;
+  padding: 60px 32px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin: 40px 32px;
+  box-sizing: border-box;
+}
+
+.gfm-embed {
+  padding: 32px;
+}
+
+
+.featureEileen {
+  display: flex;
+  margin: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+#imgEileen {
+  width: 40vw;
+  height: 50vw;
+}
+
+@media (max-width: 750px) {
+  .statement {
+    flex-direction: column;
+  }
+
+  .featureEileen{
+    flex-direction: column;
+  }
+
+  #imgEileen {
+    height: 80vw;
+    width: 53vw
+  }
+}
+
+.footer {
+  display: flex;
+  background-color: #616161;
+  height: min-content;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerText {
+  color: #858585;
+    text-align: center;
+  font-family: "isotek web";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  height: fit-content;
+}
+
+#footerImg {
+  width: 5vw;
+  height: 5vw;
+  opacity: 25%;
+  border-radius: 100px;
+  justify-self: end;
+  align-self: center;
+}
