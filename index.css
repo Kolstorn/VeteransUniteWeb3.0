@@ -227,7 +227,7 @@ a {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 800;
-  font-size: 2.25rem;
+  font-size: 4vh;
   line-height: 110%;
   /* or 79px */
 
@@ -336,47 +336,6 @@ a {
   translate: 0%;
 }
 
-@media (max-width: 750px) {
-  .divHeroButtons {
-    padding: 40px 25px;
-  }
-
-  .heroSubtext {
-    font-size: 4vw;
-  }
-
-  .main-heading {
-    font-size: 36px;
-  }
-
-  .button-group {
-    flex-direction: column;
-  }
-
-  .btn {
-    justify-content: center;
-  }
-
-  .navBarList {
-    display: none;
-  }
-
-  #navBarLogo {
-    position: absolute;
-    top: 32px;
-    right: 32px;
-  }
-
-  .hamburger-menu {
-    display: flex;
-  }
-}
-
-@media (max-width: 350px) {
-  .heroSubtext {
-    font-size: 6vw;
-  }
-}
 
 .heroImage {
   width: 40vw;
@@ -386,21 +345,6 @@ a {
   display: none;
 }
 
-@media (min-width: 1025px) {
-  /* big landscape tablets, laptops, and desktops */
-  .heroImage {
-    display: flex;
-  }
-  .divHero {
-    max-width: 50%;
-  }
-  .heroHeader {
-    font-size: 4vw;
-  }
-  .heroSubtext {
-    font-size: 1vw;
-  }
-}
 
 .statement {
   display: flex;
@@ -412,7 +356,7 @@ a {
 }
 
 .donationBox {
-   border: 2px dashed #a8d8a8;
+  border: 2px dashed #a8d8a8;
   border-radius: 12px;
   padding: 60px 32px;
   text-align: center;
@@ -422,7 +366,7 @@ a {
 }
 
 .gfm-embed {
-  padding: 32px;
+  margin: 16px;
 }
 
 
@@ -436,21 +380,6 @@ a {
 #imgEileen {
   width: 40vw;
   height: 50vw;
-}
-
-@media (max-width: 750px) {
-  .statement {
-    flex-direction: column;
-  }
-
-  .featureEileen{
-    flex-direction: column;
-  }
-
-  #imgEileen {
-    height: 80vw;
-    width: 53vw
-  }
 }
 
 .footer {
@@ -469,11 +398,11 @@ a {
 
 .footerText {
   color: #858585;
-    text-align: center;
+  text-align: center;
   font-family: "isotek web";
   font-style: normal;
   font-weight: 700;
-  font-size: 2vw;
+  font-size: 1vw;
   display: flex;
   align-items: center;
   padding: 16px;
@@ -487,4 +416,101 @@ a {
   border-radius: 100px;
   justify-self: end;
   align-self: center;
+}
+
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .heroImage {
+    display: flex;
+  }
+  .divHero {
+    max-width: 50%;
+  }
+  .heroHeader {
+    font-size: 3vw;
+  }
+  .heroSubtext {
+    font-size: 1vw;
+  }
+}
+
+@media (max-width: 750px) {
+  .statement {
+    flex-direction: column;
+  }
+  
+  .featureEileen{
+    flex-direction: column;
+  }
+  
+    #imgEileen {
+    height: 80vw;
+    width: 80vw
+  }
+}
+
+@media (max-width: 500px) {
+  .divHeroButtons {
+    padding: 40px 25px;
+  }
+  
+  .heroSubtext {
+    font-size: 3vw;
+  }
+  
+  .main-heading {
+    font-size: 36px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .btn {
+    justify-content: center;
+  }
+  
+  .navBarList {
+    display: none;
+  }
+  
+  #navBarLogo {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+  }
+  
+  .hamburger-menu {
+    display: flex;
+  }
+  
+  #navBarLogo {
+    width: 20vw;
+    height: 20vw;
+  }
+  
+  .divHero {
+    margin: 32px 16px;
+  }
+  
+  .statement {
+    margin: 0 0;
+    width: fit-content;
+  }
+  
+  .donationBox {
+    margin: 0 16px;
+  }
+
+  .featureEileen {
+    margin: 0 0;
+  }
+
+}
+
+
+@media (max-width: 350px) {
+  .heroSubtext {
+    font-size: 6vw;
+  }
 }
