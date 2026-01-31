@@ -454,8 +454,12 @@ a {
     padding: 40px 25px;
   }
   
+  .heroHeader {
+    font-size: 4.5vw;
+  }
+
   .heroSubtext {
-    font-size: 3vw;
+    font-size: 4%;
   }
   
   .main-heading {
